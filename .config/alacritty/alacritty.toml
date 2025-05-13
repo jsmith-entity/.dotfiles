@@ -1,0 +1,35 @@
+[font]
+normal = { family = "Noto Sans Mono", style = "Regular" }
+bold = { family = "Noto Sans Mono", style="Bold" }
+size = 20.0
+
+[colors.primary]
+background = "#161616"
+foreground = "#d8d8d8"
+
+[colors.normal]
+black = "#161616"
+red = "#ee5696"
+green = "#4e9a06"
+yellow = "#c4a000"
+blue = "#78a9ff"
+magenta = "#ee5696"
+cyan = "#3ddbf9"
+white = "#f3f3f3"
+
+[colors.bright]
+black = "#545454"
+red = "#33b1ff"
+green = "#be95ff"
+yellow = "#42be65"
+blue = "#78a9ff"
+magenta = "#82cfff"
+cyan = "#08bdba"
+white = "#161616"
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux new-session"]
+
+[env]
+TERM ="xterm-256color"
