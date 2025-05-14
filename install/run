@@ -1,0 +1,32 @@
+#!/bin/sh
+
+source ./create_symlink.sh
+
+if [ -z "$DEV_ENV" ]; then
+	echo "DEV_ENV is not set"
+	exit 1
+fi
+
+SRC="$DEV_ENV/env"
+
+CONF_SRC="$SRC/.config"
+CONF_DEST="$HOME/.config"
+
+mkdir -p "$CONF_DEST"
+
+noconfirm_arg=""
+for arg in "$@"; do
+	if [ "$arg" = "--noconfirm" ]; then
+		noconfirm_arg="--noconfirm"
+		break
+	fi
+done
+
+create_symlink "$CONF_SRC/alacritty" "$CONF_DEST" $noconfirm_arg
+create_symlink "$CONF_SRC/hypr" "$CONF_DEST" "$noconfirm_arg"
+create_symlink "$CONF_SRC/mpd" "$CONF_DEST" "$noconfirm_arg"
+create_symlink "$CONF_SRC/ncmpcpp" "$CONF_DEST" "$noconfirm_arg"
+create_symlink "$CONF_SRC/nvim" "$CONF_DEST" "$noconfirm_arg"
+create_symlink "$CONF_SRC/rofi" "$CONF_DEST" "$noconfirm_arg"
+create_symlink "$CONF_SRC/tmux" "$CONF_DEST" "$noconfirm_arg"
+create_symlink "$CONF_SRC/waybar" "$CONF_DEST" "$noconfirm_arg"
