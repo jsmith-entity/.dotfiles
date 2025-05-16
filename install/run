@@ -2,12 +2,12 @@
 
 source ./create_symlink.sh
 
-if [ -z "$DEV_ENV" ]; then
-	echo "DEV_ENV is not set"
+if [ -z "$DEV_HOME" ]; then
+	echo "DEV_HOME is not set"
 	exit 1
 fi
 
-SRC="$DEV_ENV/env"
+SRC="$DEV_HOME/env"
 
 CONF_SRC="$SRC/.config"
 CONF_DEST="$HOME/.config"

@@ -4,7 +4,9 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export DEV_ENV="$HOME/dev"
+export DEV_HOME="/home/shared/dev"
+
+export PATH="$HOME/.local/scripts:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,

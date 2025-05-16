@@ -1,9 +1,6 @@
 #!/bin/sh
 
 create_symlink() {
-	echo $1
-	echo $2
-	echo $3
 	noconfirm=0
 
 	# Check for --noconfirm argument - Will overwrite folder without asking
@@ -13,7 +10,6 @@ create_symlink() {
 			break
 		fi
 	done
-	echo "$noconfirm"
 
 	src=$1
 	dest=$2
