@@ -111,11 +111,11 @@ source <(fzf --zsh)
 
 # Custom clear function
 c() {
-	if git rev-parse --is-inside-work-tree &>/dev/null; then
+	if [ "$PWD" = "$HOME" ] || git rev-parse --is-inside-work-tree &>/dev/null; then
 		clear
-		ls -lA --group-directories-first
+		LC_ALL=C ls -lA --group-directories-first
 	else
 		clear
-		ls -l --group-directories-first
+		LC_ALL=C ls -l --group-directories-first
 	fi
 }
