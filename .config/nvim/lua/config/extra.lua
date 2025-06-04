@@ -10,7 +10,7 @@ vim.opt.shiftwidth = 4
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = true
+vim.opt.colorcolumn = "80"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true

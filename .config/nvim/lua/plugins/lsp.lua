@@ -27,7 +27,7 @@ return {
 	    })
 
 		vim.diagnostic.config({
-			virtual_text = false
+			virtual_text = true
 		})
 
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostics as floating window"} )
