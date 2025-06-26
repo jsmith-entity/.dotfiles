@@ -24,9 +24,8 @@ if [[ $# -eq 1 ]]; then
 	selected=$1
 else
 	selected=$(find \
-		/home/shared/dev /home/shared/dev/env /home/shared/dev/env/.local \
-		~/projects/ \
-		~/programming/ \
+		/home/shared/dev/env \
+		~/projects/ ~/projects/rust/ \
 		~/music \
 		-mindepth 1 -maxdepth 1 -type d \
 		-not -name '.git' \

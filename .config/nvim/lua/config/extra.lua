@@ -17,9 +17,9 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 12
 vim.opt.signcolumn = "yes"
 
 vim.diagnostic.config({
-    virtual_text = true
+	virtual_text = true
 })
